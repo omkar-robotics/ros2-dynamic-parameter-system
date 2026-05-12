@@ -182,34 +182,35 @@ ros2 run my_pub_py my_publisher
 ```
 
 Expected output:
-# Output Screenshot
+## Output Screenshots
 
-![ROS2 Parameter Output](https://raw.githubusercontent.com/omkar-robotics/repository-name/main/Screenshot%20from%202026-05-12%2015-09-23.png)
+### Parameter Configuration Output
 
-```text
-Robot Name: TurtleBot
-Linear Speed: 1.5
-Use Sim Time: True
-```
-# Dynamic Parameter Example
+![Parameter Configuration Output](https://raw.githubusercontent.com/omkar-robotics/ros2-dynamic-parameter-system/main/Screenshot%20from%202026-05-12%2015-09-23.png)
+
+---
+
+### Dynamic Parameter Example
 
 This project supports runtime parameter modification without restarting the node.
 
 Example:
-```
-ros2 run my_pub_pkg my_publisher --ros-args -p number:=10 -p publish_period:=0.5
 
+```bash
+ros2 run my_pub_pkg my_publisher --ros-args -p number:=10 -p publish_period:=0.5
 ```
 
 Updated output:
-![ROS2 Parameter Output](https://raw.githubusercontent.com/omkar-robotics/repository-name/main/Screenshot%20from%202026-05-12%2015-09-23.png)
 
+### Dynamic Parameter Update Output
+
+![Dynamic Parameter Update Output](https://raw.githubusercontent.com/omkar-robotics/ros2-dynamic-parameter-system/main/Screenshot%20from%202026-05-12%2015-09-44.png)
 
 ```
 
 ## Verify Packages
 
-```
+```bash
 ros2 pkg list | grep my_parameter_pkg
 ```
 
@@ -227,7 +228,6 @@ ros2 param list
 
 ```bash
 ros2 param get /parameter_node robot_name
-
 ```
 
 ---
