@@ -1,4 +1,3 @@
-````markdown
 # ROS2 Dynamic Parameter System
 
 A professional ROS2 parameter management project demonstrating dynamic parameter handling, YAML-based configuration, runtime parameter updates, and modular ROS2 Python node architecture using `rclpy`.
@@ -155,17 +154,9 @@ git clone https://github.com/omkar-robotics/ros2-dynamic-parameter-system.git
 
 ---
 
-## Navigate to Workspace
 
-```bash
-cd ros2-dynamic-parameter-system
 ```
-
----
-
 ## Build Workspace
-
-```bash
 colcon build
 ```
 
@@ -181,13 +172,13 @@ source install/setup.bash
 
 # Running the Project
 
-## Run Parameter Node
+## Run publisher Node
 
 Open terminal:
 
 ```bash
 source install/setup.bash
-ros2 run my_parameter_pkg parameter_node
+ros2 run my_pub_py my_publisher
 ```
 
 Expected output:
@@ -197,13 +188,19 @@ Robot Name: TurtleBot
 Linear Speed: 1.5
 Use Sim Time: True
 ```
+# Dynamic Parameter Example
 
----
+This project supports runtime parameter modification without restarting the node.
 
-# Run Using Launch File
+Example:
 
 ```bash
-ros2 launch my_parameter_pkg parameter_launch.py
+ros2 run my_pub_pkg my_publisher --ros-args -p number:=10 -p publish_period:=0.5```
+
+Updated output:
+
+```text
+Robot Name: ROS2_Bot
 ```
 
 ---
@@ -234,18 +231,6 @@ ros2 param get /parameter_node robot_name
 
 ---
 
-## Change Parameter Dynamically
-
-```bash
-ros2 param set /parameter_node linear_speed 2.0
-```
-
-Expected output:
-
-```text
-Set parameter successful
-```
-
 ---
 
 # Dynamic Parameter Example
@@ -254,14 +239,11 @@ This project supports runtime parameter modification without restarting the node
 
 Example:
 
-```bash
-ros2 param set /parameter_node robot_name "ROS2_Bot"
-```
+ros2 run my_pub_pkg my_publisher --ros-args -p number:=10 -p publish_period:=0.5```
 
 Updated output:
 
-```text
-Robot Name: ROS2_Bot
+
 ```
 
 ---
@@ -337,9 +319,4 @@ Electrical Engineering Student | ROS2 & Robotics Enthusiast
 
 ---
 
-# License
 
-This project is licensed under the Apache-2.0 License.
-
-```
-```
