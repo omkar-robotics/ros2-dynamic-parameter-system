@@ -289,7 +289,7 @@ Possible future enhancements:
 
 ## Omkar Honrao
 
-Electrical Engineering Student | ROS2 & Robotics Enthusiast
+Robotics Research Inter | ROS2 & Robotics Enthusiast
 
 ### Areas of Interest
 
