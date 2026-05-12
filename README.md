@@ -193,23 +193,18 @@ Use Sim Time: True
 This project supports runtime parameter modification without restarting the node.
 
 Example:
+```
+ros2 run my_pub_pkg my_publisher --ros-args -p number:=10 -p publish_period:=0.5
 
-```bash
-ros2 run my_pub_pkg my_publisher --ros-args -p number:=10 -p publish_period:=0.5```
+```
 
 Updated output:
 
-```text
-Robot Name: ROS2_Bot
+
 ```
-
----
-
-# ROS2 Command-Line Verification
-
 ## Verify Packages
 
-```bash
+```
 ros2 pkg list | grep my_parameter_pkg
 ```
 
@@ -227,22 +222,6 @@ ros2 param list
 
 ```bash
 ros2 param get /parameter_node robot_name
-```
-
----
-
----
-
-# Dynamic Parameter Example
-
-This project supports runtime parameter modification without restarting the node.
-
-Example:
-
-ros2 run my_pub_pkg my_publisher --ros-args -p number:=10 -p publish_period:=0.5```
-
-Updated output:
-
 
 ```
 
