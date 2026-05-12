@@ -182,6 +182,9 @@ ros2 run my_pub_py my_publisher
 ```
 
 Expected output:
+# Output Screenshot
+
+![ROS2 Parameter Output](https://raw.githubusercontent.com/omkar-robotics/repository-name/main/Screenshot%20from%202026-05-12%2015-09-23.png)
 
 ```text
 Robot Name: TurtleBot
@@ -199,6 +202,7 @@ ros2 run my_pub_pkg my_publisher --ros-args -p number:=10 -p publish_period:=0.5
 ```
 
 Updated output:
+![ROS2 Parameter Output](https://raw.githubusercontent.com/omkar-robotics/repository-name/main/Screenshot%20from%202026-05-12%2015-09-23.png)
 
 
 ```
